@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<title>Simple Calculator App</title>
+</head>
+<body>
+    <h1>Here are all your calculations</h1>
+    <ul>
+        <% for(var i = 0; i < solution.length;i++){ %>
+            <li><%= solution[i].x %> <%= solution[i].op  %> <%= solution[i].y %> = <%= solution[i].z %></li>
+        <% } %>
+    </ul>
+
+    <h2>Add by entering a number for x and y</h2>
+    <form action="/add" method="POST">
+    	<input type="text" name="x" placeholder="x">
+    	<input type="text" name="y" placeholder="y">
+    	<input type="submit">
+    </form>
+    <h3>Subtract by entering a number for x and y</h3>
+    <form action="/subtract" method="POST">
+        <input type="text" name="x" placeholder="x">
+        <input type="text" name="y" placeholder="y">
+        <input type="submit">
+    </form>
+    <h4>Multiply by entering a number for x and y</h4>
+    <form action="/multiply" method="POST">
+        <input type="text" name="x" placeholder="x">
+        <input type="text" name="y" placeholder="y">
+        <input type="submit">
+    </form>
+    <h5>Divide by entering a number for x and y</h5>
+    <form action="/divide" method="POST">
+        <input type="text" name="x" placeholder="x">
+        <input type="text" name="y" placeholder="y">
+        <input type="submit">
+    </form>
+</body>
+</html>
