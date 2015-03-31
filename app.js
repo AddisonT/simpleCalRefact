@@ -45,7 +45,7 @@ app.post('/divide', function(req,res){
 	var a = Number(req.body.x);
 	var b = Number(req.body.y);
 	var c = a/b;
-	solution.push({x: a, y: b, z: c, op: "-"});	
+	solution.push({x: a, y: b, z: c, op: "/"});	
 	res.redirect('/');
 });
 
